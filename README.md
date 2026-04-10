@@ -90,7 +90,7 @@ cd Lab03_Variant03
 ### Запуск приложения
 
 ```bash
-cd FactorialApp
+cd Lab03_Variant03
 dotnet run
 ```
 
@@ -99,6 +99,6 @@ dotnet run
 ### Запуск тестов
 
 ```bash
-cd FactorialApp.Tests
+cd Factorial_Tests
 dotnet test
 ```
