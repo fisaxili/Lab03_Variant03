@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab03_Variant03
 {
@@ -33,5 +29,23 @@ namespace Lab03_Variant03
             if (n == 0 || n == 1) return 1;
             return n * RecursiveHelper(n - 1);
         }
+        /// <summary>
+        /// Итеративное вычисление факториала n!
+        /// Сложность: O(n) по времени, O(1) по памяти
+        /// </summary>
+        public static long FactorialIterative(int n)
+        {
+            if (n < 0) throw new ArgumentException("n не может быть отрицательным");
+            if (n > 20) throw new ArgumentException("n не должно превышать 20");
+            IterativeOpCount = 0;
+            long result = 1;
+            for (int i = 2; i <= n; i++)
+            {
+                result *= i; // одна операция умножения
+                IterativeOpCount++;
+            }
+            return result;
+        }
 
     }
+}
