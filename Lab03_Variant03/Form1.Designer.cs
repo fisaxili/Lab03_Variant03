@@ -112,7 +112,7 @@
 
             // Form1
             this.ClientSize = new System.Drawing.Size(790, 570);
-            this.Text = "Лабораторная работа №3 — Факториал (Вариант 3)";
+            this.Text = "Лабораторная работа №3 — Вычисоение факториала";
             this.Controls.Add(this.lblN);
             this.Controls.Add(this.txtN);
             this.Controls.Add(this.btnCalculate);
