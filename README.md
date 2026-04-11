@@ -59,19 +59,22 @@
 После клонирования вы увидите следующую структуру файлов и папок:
 ```mermaid
 flowchart TD
-ROOT[" Lab03_Variant03 (репозиторий)"]
-ROOT --> SLN[" Lab03_Variant03.sln\nфайл решения Visual Studio"]
-ROOT --> GITIGNORE[" .gitignore"]
-ROOT --> README[" README.md\nдокументация проекта"]
-ROOT --> MAIN[" Lab03_Variant03\nосновной проект WinForms"]
-MAIN --> LOGIC[" Logic.cs\nвычислительное ядро (факториал)"]
-MAIN --> FORM1[" Form1.cs\nлогика интерфейса"]
-MAIN --> FORM1D[" Form1.Designer.cs\nкод интерфейса (дизайнер)"]
-MAIN --> PROGRAM[" Program.cs\nточка входа"]
-MAIN --> CSPROJ[" Lab03_Variant03.csproj\nфайл проекта"]
-ROOT --> TESTS[" Factorial_Tests\nпроект модульных тестов"]
-TESTS --> TESTFILE[" Test1.cs\n16 тестов MSTest"]
-TESTS --> TESTCSPROJ[" Factorial_Tests.csproj\nфайл проекта тестов"]
+ROOT["Lab03_Variant03\nосновной проект WinForms"]
+
+ROOT --> LOGIC["Logic.cs\nвычислительное ядро (факториал)"]
+ROOT --> FORM1["Form1.cs\nлогика интерфейса"]
+ROOT --> DESIGNER["Form1.Designer.cs\nкод интерфейса (дизайнер)"]
+ROOT --> PROGRAM["Program.cs\nточка входа"]
+ROOT --> CSPROJ["Lab03_Variant03.csproj\nфайл проекта"]
+
+LOGIC --> L1["FactorialRecursive(int n)"]
+LOGIC --> L2["FactorialIterative(int n)"]
+L2 --> L3["RecursiveHelper(int n) —\nприватный"]
+
+FORM1 --> F1["btnCalculate_Click()"]
+FORM1 --> F2["btnExperiment_Click()"]
+FORM1 --> F3["DrawChart()"]
+
 ```
 ---
 
