@@ -57,25 +57,22 @@
 ## Структура репозитория
 
 После клонирования вы увидите следующую структуру файлов и папок:
-
+```mermaid
+flowchart TD
+ROOT[" Lab03_Variant03 (репозиторий)"]
+ROOT --> SLN[" Lab03_Variant03.sln\nфайл решения Visual Studio"]
+ROOT --> GITIGNORE[" .gitignore"]
+ROOT --> README[" README.md\nдокументация проекта"]
+ROOT --> MAIN[" Lab03_Variant03\nосновной проект WinForms"]
+MAIN --> LOGIC[" Logic.cs\nвычислительное ядро (факториал)"]
+MAIN --> FORM1[" Form1.cs\nлогика интерфейса"]
+MAIN --> FORM1D[" Form1.Designer.cs\nкод интерфейса (дизайнер)"]
+MAIN --> PROGRAM[" Program.cs\nточка входа"]
+MAIN --> CSPROJ[" Lab03_Variant03.csproj\nфайл проекта"]
+ROOT --> TESTS[" Factorial_Tests\nпроект модульных тестов"]
+TESTS --> TESTFILE[" Test1.cs\n16 тестов MSTest"]
+TESTS --> TESTCSPROJ[" Factorial_Tests.csproj\nфайл проекта тестов"]
 ```
-Lab03_Variant03/
-├── Lab03_Variant03/               # Основная папка с кодом приложения
-│   ├── Form1.cs                   # Логика главной формы (обработчики событий)
-│   ├── Form1.Designer.cs          # Автогенерируемый код интерфейса формы
-│   ├── Logic.cs                   # Класс с вычислительной логикой
-│   ├── Program.cs                 # Точка входа в приложение
-│   └── Lab03_Variant03.csproj     # Файл проекта
-│
-├── Factorial_Tests/               # Проект с модульными тестами (MSTest)
-│   ├── Test1.cs                   # 16 модульных тестов
-│   └── FactorialApp.Tests.csproj  # Файл проекта тестов
-│
-├── Lab03_Variant03.sln            # Файл решения (Solution)
-├── .gitignore                     # Файл исключений для Git
-└── README.md                      # Документация проекта
-```
-
 ---
 
 ## Запуск проекта
